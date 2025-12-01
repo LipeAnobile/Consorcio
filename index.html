@@ -75,75 +75,82 @@
 <body class="font-sans text-slate-600 bg-brand-light antialiased overflow-x-hidden">
 
     <!-- Navbar -->
-    <nav class="fixed w-full z-50 bg-brand-dark/95 backdrop-blur-md border-b border-white/10 shadow-lg">
+    <nav class="fixed w-full z-50 bg-brand-dark/95 backdrop-blur-md border-b border-white/10 shadow-lg transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0 flex items-center gap-2">
                     <div class="w-10 h-10 bg-brand-neon rounded-lg flex items-center justify-center text-brand-dark font-bold text-xl">FM</div>
-                    <span class="font-heading font-bold text-xl text-white tracking-wide">Francisco <span class="text-brand-neon">Melo</span></span>
+                    <span class="font-heading font-bold text-lg md:text-xl text-white tracking-wide">Francisco <span class="text-brand-neon">Melo</span></span>
                 </div>
+                <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8 items-center">
                     <a href="#beneficios" class="text-slate-300 hover:text-white transition-colors text-sm font-medium uppercase tracking-wider">Benefícios</a>
                     <a href="#tipos" class="text-slate-300 hover:text-white transition-colors text-sm font-medium uppercase tracking-wider">Tipos</a>
                     <a href="#quem-sou" class="text-slate-300 hover:text-white transition-colors text-sm font-medium uppercase tracking-wider">Sobre</a>
-                    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%20Francisco%2C%20gostaria%20de%20uma%20an%C3%A1lise%20de%20cons%C3%B3rcio." class="bg-brand-neon hover:bg-cyan-400 text-brand-dark font-heading font-bold px-6 py-2 rounded-full transition-all duration-300 neon-glow">
-                        <i class="fab fa-whatsapp mr-2"></i> Fale Comigo
+                    <a href="https://wa.me/5515991668687?text=Ol%C3%A1%20Francisco%2C%20gostaria%20de%20uma%20an%C3%A1lise%20de%20cons%C3%B3rcio." class="bg-brand-neon hover:bg-cyan-400 text-brand-dark font-heading font-bold px-6 py-2 rounded-full transition-all duration-300 neon-glow flex items-center gap-2">
+                        <i class="fab fa-whatsapp"></i> 
+                        <span class="hidden lg:inline">(15) 99166-8687</span>
+                        <span class="lg:hidden">Contato</span>
                     </a>
                 </div>
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-white hover:text-brand-neon focus:outline-none">
+                    <button id="mobile-menu-btn" class="text-white hover:text-brand-neon focus:outline-none p-2" aria-label="Menu">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
                 </div>
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-brand-card border-t border-slate-700">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#beneficios" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-brand-neon">Benefícios</a>
-                <a href="#tipos" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-brand-neon">Tipos</a>
-                <a href="#quem-sou" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-brand-neon">Sobre</a>
-                <a href="https://wa.me/5511999999999?text=Ol%C3%A1%20Francisco%2C%20gostaria%20de%20uma%20an%C3%A1lise%20de%20cons%C3%B3rcio." class="block w-full text-center mt-4 bg-brand-neon text-brand-dark font-bold px-4 py-3 rounded-md">Fale Comigo</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-card border-t border-slate-700 absolute w-full left-0 shadow-2xl">
+            <div class="px-4 pt-4 pb-6 space-y-2">
+                <a href="#beneficios" class="block px-4 py-3 rounded-lg text-base font-medium text-white hover:bg-brand-dark hover:text-brand-neon transition-colors">Benefícios</a>
+                <a href="#tipos" class="block px-4 py-3 rounded-lg text-base font-medium text-white hover:bg-brand-dark hover:text-brand-neon transition-colors">Tipos de Consórcio</a>
+                <a href="#quem-sou" class="block px-4 py-3 rounded-lg text-base font-medium text-white hover:bg-brand-dark hover:text-brand-neon transition-colors">Sobre Mim</a>
+                <div class="pt-4 mt-2 border-t border-slate-700">
+                    <a href="https://wa.me/5515991668687?text=Ol%C3%A1%20Francisco%2C%20gostaria%20de%20uma%20an%C3%A1lise%20de%20cons%C3%B3rcio." class="block w-full text-center bg-brand-neon text-brand-dark font-bold px-4 py-3 rounded-lg shadow-lg active:scale-95 transition-transform">
+                        <i class="fab fa-whatsapp mr-2"></i> Chamar no WhatsApp
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative bg-hero-pattern bg-cover bg-center min-h-screen flex items-center pt-20">
+    <section class="relative bg-hero-pattern bg-cover bg-center min-h-screen flex items-center pt-24 pb-12 md:pt-20 md:pb-0">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="fade-in-up">
-                    <span class="inline-block py-1 px-3 rounded-full bg-brand-neon/10 border border-brand-neon text-brand-neon text-sm font-semibold mb-6 tracking-wide uppercase">
+                    <span class="inline-block py-1 px-3 rounded-full bg-brand-neon/10 border border-brand-neon text-brand-neon text-xs md:text-sm font-semibold mb-6 tracking-wide uppercase">
                         Consultoria Premium
                     </span>
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-white leading-tight mb-6">
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-white leading-tight mb-6">
                         Realize seu sonho com a melhor consultoria de <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">consórcios do Brasil</span>
                     </h1>
-                    <p class="text-lg text-slate-300 mb-8 max-w-lg leading-relaxed">
+                    <p class="text-base md:text-lg text-slate-300 mb-8 max-w-lg leading-relaxed">
                         Soluções personalizadas para conquistar sua casa, carro ou investimento — com segurança, transparência e economia.
                     </p>
                     
                     <div class="space-y-3 mb-8">
                         <div class="flex items-center text-slate-200">
-                            <i class="fas fa-check-circle text-brand-neon mr-3 text-xl"></i>
-                            <span class="font-medium">Especialista em Consórcios</span>
+                            <i class="fas fa-check-circle text-brand-neon mr-3 text-lg md:text-xl"></i>
+                            <span class="font-medium text-sm md:text-base">Especialista em Consórcios</span>
                         </div>
                         <div class="flex items-center text-slate-200">
-                            <i class="fas fa-check-circle text-brand-neon mr-3 text-xl"></i>
-                            <span class="font-medium">Atendimento 100% humanizado</span>
+                            <i class="fas fa-check-circle text-brand-neon mr-3 text-lg md:text-xl"></i>
+                            <span class="font-medium text-sm md:text-base">Atendimento 100% humanizado</span>
                         </div>
                         <div class="flex items-center text-slate-200">
-                            <i class="fas fa-check-circle text-brand-neon mr-3 text-xl"></i>
-                            <span class="font-medium">Condições especiais e taxas reduzidas</span>
+                            <i class="fas fa-check-circle text-brand-neon mr-3 text-lg md:text-xl"></i>
+                            <span class="font-medium text-sm md:text-base">Condições especiais e taxas reduzidas</span>
                         </div>
                         <div class="flex items-center text-slate-200">
-                            <i class="fas fa-check-circle text-brand-neon mr-3 text-xl"></i>
-                            <span class="font-medium">Acompanhamento até a contemplação</span>
+                            <i class="fas fa-check-circle text-brand-neon mr-3 text-lg md:text-xl"></i>
+                            <span class="font-medium text-sm md:text-base">Acompanhamento até a contemplação</span>
                         </div>
                     </div>
 
-                    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20quero%20uma%20an%C3%A1lise%20gratuita." class="inline-block w-full md:w-auto text-center bg-gradient-to-r from-brand-primary to-brand-neon hover:from-blue-500 hover:to-cyan-400 text-brand-dark font-heading font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:shadow-cyan-500/50 transition-all transform hover:-translate-y-1">
+                    <a href="https://wa.me/5515991668687?text=Ol%C3%A1%2C%20quero%20uma%20an%C3%A1lise%20gratuita." class="block w-full md:inline-block md:w-auto text-center bg-gradient-to-r from-brand-primary to-brand-neon hover:from-blue-500 hover:to-cyan-400 text-brand-dark font-heading font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:shadow-cyan-500/50 transition-all transform hover:-translate-y-1">
                         Quero uma análise gratuita
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
@@ -151,7 +158,7 @@
                 <!-- Image Wrapper for Desktop -->
                 <div class="hidden lg:block relative fade-in-up" style="animation-delay: 0.2s;">
                     <div class="absolute -inset-4 bg-brand-neon/20 rounded-2xl blur-lg"></div>
-                    <img src="https://i.postimg.cc/hGkVxvC2/image.png">
+                    <img src="https://i.postimg.cc/hGkVxvC2/image.png" class="relative rounded-2xl shadow-2xl border border-white/10 z-10 w-full object-cover h-[500px] lg:h-[600px]">
                     
                     <!-- Floating Card -->
                     <div class="absolute bottom-10 -left-10 bg-white p-4 rounded-lg shadow-xl z-20 flex items-center gap-4 animate-bounce" style="animation-duration: 3s;">
@@ -169,35 +176,37 @@
     </section>
 
     <!-- Quem é Francisco Melo -->
-    <section id="quem-sou" class="py-20 bg-white">
+    <section id="quem-sou" class="py-12 md:py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+                <!-- Imagem Mobile: Aparece no topo se desejado, aqui mantido a ordem normal de fluxo (texto depois imagem no mobile pode ser melhor para SEO, mas para branding imagem ajuda) -->
+                <!-- Ajuste: Em mobile (padrão) order-2 (imagem abaixo), md:order-1 (imagem esquerda) -->
                 <div class="order-2 md:order-1 relative fade-in-up">
-                    <img src="https://i.postimg.cc/GpwpxDCj/image.png">
-                    <div class="absolute -bottom-6 -right-6 bg-brand-dark p-6 rounded-xl shadow-lg border-l-4 border-brand-neon">
-                        <p class="text-brand-neon font-heading font-bold text-4xl mb-1">+200</p>
-                        <p class="text-white text-sm uppercase tracking-wide">Clientes Atendidos</p>
+                    <img src="https://i.postimg.cc/GpwpxDCj/image.png" class="rounded-xl shadow-2xl w-full h-auto object-cover max-h-[500px]">
+                    <div class="absolute -bottom-4 -right-2 md:-bottom-6 md:-right-6 bg-brand-dark p-4 md:p-6 rounded-xl shadow-lg border-l-4 border-brand-neon">
+                        <p class="text-brand-neon font-heading font-bold text-3xl md:text-4xl mb-1">+200</p>
+                        <p class="text-white text-xs md:text-sm uppercase tracking-wide">Clientes Atendidos</p>
                     </div>
                 </div>
                 <div class="order-1 md:order-2 fade-in-up" style="animation-delay: 0.2s;">
                     <h2 class="text-brand-primary font-heading font-bold text-sm uppercase tracking-wider mb-2">Sobre o Consultor</h2>
-                    <h3 class="text-3xl md:text-4xl font-heading font-bold text-brand-dark mb-6">Experiência e estratégia para realizar o seu objetivo</h3>
-                    <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                    <h3 class="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-6">Experiência e estratégia para realizar o seu objetivo</h3>
+                    <p class="text-base md:text-lg text-slate-600 mb-6 leading-relaxed">
                         Francisco Melo é consultor financeiro especializado em consórcios, ajudando clientes a conquistar seus bens com planejamento estratégico e as melhores oportunidades do mercado. 
                     </p>
-                    <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                    <p class="text-base md:text-lg text-slate-600 mb-8 leading-relaxed">
                         Com experiência e atendimento personalizado, ele acompanha você em cada etapa — do estudo inicial de viabilidade financeira até o momento da contemplação.
                     </p>
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-brand-light flex items-center justify-center text-brand-primary">
+                            <div class="w-10 h-10 rounded-full bg-brand-light flex items-center justify-center text-brand-primary flex-shrink-0">
                                 <i class="fab fa-whatsapp text-xl"></i>
                             </div>
                             <span class="font-medium text-slate-700">Atendimento Ágil</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-brand-light flex items-center justify-center text-brand-primary">
+                            <div class="w-10 h-10 rounded-full bg-brand-light flex items-center justify-center text-brand-primary flex-shrink-0">
                                 <i class="fas fa-certificate text-xl"></i>
                             </div>
                             <span class="font-medium text-slate-700">Especialista Certificado</span>
@@ -209,19 +218,19 @@
     </section>
 
     <!-- Benefícios -->
-    <section id="beneficios" class="py-20 bg-brand-dark relative overflow-hidden">
+    <section id="beneficios" class="py-12 md:py-20 bg-brand-dark relative overflow-hidden">
         <!-- Background Elements -->
         <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-blue-900/20 to-transparent pointer-events-none"></div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16 fade-in-up">
+            <div class="text-center mb-10 md:mb-16 fade-in-up">
                 <h2 class="text-brand-neon font-heading font-bold text-sm uppercase tracking-wider mb-2">Por que Consórcio?</h2>
-                <h3 class="text-3xl md:text-4xl font-heading font-bold text-white">Vantagens inteligentes para seu bolso</h3>
+                <h3 class="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-white">Vantagens inteligentes para seu bolso</h3>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                 <!-- Card 1 -->
-                <div class="bg-brand-card p-8 rounded-2xl border border-white/5 hover:border-brand-neon/50 transition-all duration-300 hover:-translate-y-2 group fade-in-up">
+                <div class="bg-brand-card p-6 md:p-8 rounded-2xl border border-white/5 hover:border-brand-neon/50 transition-all duration-300 hover:-translate-y-2 group fade-in-up">
                     <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-neon transition-colors duration-300">
                         <i class="fas fa-piggy-bank text-2xl text-brand-neon group-hover:text-brand-dark"></i>
                     </div>
@@ -230,7 +239,7 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="bg-brand-card p-8 rounded-2xl border border-white/5 hover:border-brand-neon/50 transition-all duration-300 hover:-translate-y-2 group fade-in-up" style="animation-delay: 0.1s;">
+                <div class="bg-brand-card p-6 md:p-8 rounded-2xl border border-white/5 hover:border-brand-neon/50 transition-all duration-300 hover:-translate-y-2 group fade-in-up" style="animation-delay: 0.1s;">
                     <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-neon transition-colors duration-300">
                         <i class="fas fa-chart-pie text-2xl text-brand-neon group-hover:text-brand-dark"></i>
                     </div>
@@ -239,7 +248,7 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="bg-brand-card p-8 rounded-2xl border border-white/5 hover:border-brand-neon/50 transition-all duration-300 hover:-translate-y-2 group fade-in-up" style="animation-delay: 0.2s;">
+                <div class="bg-brand-card p-6 md:p-8 rounded-2xl border border-white/5 hover:border-brand-neon/50 transition-all duration-300 hover:-translate-y-2 group fade-in-up" style="animation-delay: 0.2s;">
                     <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-neon transition-colors duration-300">
                         <i class="fas fa-key text-2xl text-brand-neon group-hover:text-brand-dark"></i>
                     </div>
@@ -248,7 +257,7 @@
                 </div>
 
                 <!-- Card 4 -->
-                <div class="bg-brand-card p-8 rounded-2xl border border-white/5 hover:border-brand-neon/50 transition-all duration-300 hover:-translate-y-2 group fade-in-up" style="animation-delay: 0.3s;">
+                <div class="bg-brand-card p-6 md:p-8 rounded-2xl border border-white/5 hover:border-brand-neon/50 transition-all duration-300 hover:-translate-y-2 group fade-in-up" style="animation-delay: 0.3s;">
                     <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-neon transition-colors duration-300">
                         <i class="fas fa-shield-alt text-2xl text-brand-neon group-hover:text-brand-dark"></i>
                     </div>
@@ -260,11 +269,11 @@
     </section>
 
     <!-- O que o cliente ganha -->
-    <section class="py-20 bg-brand-light">
+    <section class="py-12 md:py-20 bg-brand-light">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
                 <div class="fade-in-up">
-                    <h3 class="text-3xl md:text-4xl font-heading font-bold text-brand-dark mb-8">O diferencial da minha consultoria</h3>
+                    <h3 class="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-8">O diferencial da minha consultoria</h3>
                     
                     <ul class="space-y-6">
                         <li class="flex items-start">
@@ -307,15 +316,15 @@
                 </div>
                 
                 <!-- Depoimento Destaque -->
-                <div class="bg-white p-8 rounded-2xl shadow-xl border-l-4 border-brand-primary fade-in-up" style="animation-delay: 0.2s;">
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-xl border-l-4 border-brand-primary fade-in-up mt-6 lg:mt-0" style="animation-delay: 0.2s;">
                     <div class="flex text-yellow-400 mb-4">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="text-slate-700 italic text-lg mb-6">
+                    <p class="text-slate-700 italic text-base md:text-lg mb-6">
                         "Eu achava que consórcio era demorado, mas o Francisco montou uma estratégia de lance e fui contemplado no 4º mês. Hoje tenho minha casa própria e pago metade do que pagaria num financiamento."
                     </p>
                     <div class="flex items-center">
-                        <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 font-bold text-xl mr-4">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 font-bold text-xl mr-4 flex-shrink-0">
                             RC
                         </div>
                         <div>
@@ -329,11 +338,11 @@
     </section>
 
     <!-- Tipos de Consórcio -->
-    <section id="tipos" class="py-20 bg-white">
+    <section id="tipos" class="py-12 md:py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in-up">
+            <div class="text-center mb-10 md:mb-16 fade-in-up">
                 <h2 class="text-brand-primary font-heading font-bold text-sm uppercase tracking-wider mb-2">Soluções Completas</h2>
-                <h3 class="text-3xl md:text-4xl font-heading font-bold text-brand-dark">Qual é o seu objetivo hoje?</h3>
+                <h3 class="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-brand-dark">Qual é o seu objetivo hoje?</h3>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -343,10 +352,10 @@
                         <div class="absolute inset-0 bg-brand-dark/30 group-hover:bg-brand-dark/10 transition-colors z-10"></div>
                         <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Consórcio de Imóvel" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
                     </div>
-                    <div class="p-8 bg-white border border-t-0 border-slate-100 h-full flex flex-col">
+                    <div class="p-6 md:p-8 bg-white border border-t-0 border-slate-100 h-full flex flex-col">
                         <h4 class="text-2xl font-heading font-bold text-brand-dark mb-4">Imóvel</h4>
                         <p class="text-slate-600 mb-6 flex-grow">Para comprar, reformar, construir ou quitar financiamento. A forma mais barata de aumentar seu patrimônio.</p>
-                        <a href="https://wa.me/5511999999999?text=Quero%20saber%20sobre%20cons%C3%B3rcio%20de%20im%C3%B3vel" class="text-brand-primary font-bold hover:text-brand-neon transition-colors flex items-center">
+                        <a href="https://wa.me/5515991668687?text=Quero%20saber%20sobre%20cons%C3%B3rcio%20de%20im%C3%B3vel" class="text-brand-primary font-bold hover:text-brand-neon transition-colors flex items-center">
                             Quero saber os valores <i class="fas fa-arrow-right ml-2 text-sm"></i>
                         </a>
                     </div>
@@ -358,10 +367,10 @@
                         <div class="absolute inset-0 bg-brand-dark/30 group-hover:bg-brand-dark/10 transition-colors z-10"></div>
                         <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Consórcio de Automóvel" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
                     </div>
-                    <div class="p-8 bg-white border border-t-0 border-slate-100 h-full flex flex-col">
+                    <div class="p-6 md:p-8 bg-white border border-t-0 border-slate-100 h-full flex flex-col">
                         <h4 class="text-2xl font-heading font-bold text-brand-dark mb-4">Automóvel</h4>
                         <p class="text-slate-600 mb-6 flex-grow">Troque de carro ou conquiste seu primeiro veículo sem pagar juros. Válido para carros novos e seminovos.</p>
-                        <a href="https://wa.me/5511999999999?text=Quero%20saber%20sobre%20cons%C3%B3rcio%20de%20autom%C3%B3vel" class="text-brand-primary font-bold hover:text-brand-neon transition-colors flex items-center">
+                        <a href="https://wa.me/5515991668687?text=Quero%20saber%20sobre%20cons%C3%B3rcio%20de%20autom%C3%B3vel" class="text-brand-primary font-bold hover:text-brand-neon transition-colors flex items-center">
                             Quero saber os valores <i class="fas fa-arrow-right ml-2 text-sm"></i>
                         </a>
                     </div>
@@ -373,10 +382,10 @@
                         <div class="absolute inset-0 bg-brand-dark/30 group-hover:bg-brand-dark/10 transition-colors z-10"></div>
                         <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80" alt="Consórcio como Investimento" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
                     </div>
-                    <div class="p-8 bg-white border border-t-0 border-slate-100 h-full flex flex-col">
+                    <div class="p-6 md:p-8 bg-white border border-t-0 border-slate-100 h-full flex flex-col">
                         <h4 class="text-2xl font-heading font-bold text-brand-dark mb-4">Investimento</h4>
                         <p class="text-slate-600 mb-6 flex-grow">Construa renda passiva com aluguéis ou revenda cartas contempladas com alta rentabilidade.</p>
-                        <a href="https://wa.me/5511999999999?text=Quero%20saber%20sobre%20cons%C3%B3rcio%20como%20investimento" class="text-brand-primary font-bold hover:text-brand-neon transition-colors flex items-center">
+                        <a href="https://wa.me/5515991668687?text=Quero%20saber%20sobre%20cons%C3%B3rcio%20como%20investimento" class="text-brand-primary font-bold hover:text-brand-neon transition-colors flex items-center">
                             Quero saber os valores <i class="fas fa-arrow-right ml-2 text-sm"></i>
                         </a>
                     </div>
@@ -386,11 +395,11 @@
     </section>
 
     <!-- Como Funciona -->
-    <section class="py-20 bg-brand-dark text-white">
+    <section class="py-12 md:py-20 bg-brand-dark text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in-up">
+            <div class="text-center mb-10 md:mb-16 fade-in-up">
                 <h2 class="text-brand-neon font-heading font-bold text-sm uppercase tracking-wider mb-2">Passo a Passo</h2>
-                <h3 class="text-3xl md:text-4xl font-heading font-bold">Como funciona a consultoria</h3>
+                <h3 class="text-2xl md:text-3xl lg:text-4xl font-heading font-bold">Como funciona a consultoria</h3>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
@@ -403,7 +412,7 @@
                         <i class="fas fa-comments text-3xl text-brand-neon"></i>
                     </div>
                     <h4 class="text-xl font-bold font-heading mb-2">1. Diagnóstico</h4>
-                    <p class="text-sm text-slate-400">Entendemos seu objetivo e capacidade de pagamento.</p>
+                    <p class="text-sm text-slate-400 max-w-xs mx-auto">Entendemos seu objetivo e capacidade de pagamento.</p>
                 </div>
 
                 <!-- Step 2 -->
@@ -412,7 +421,7 @@
                         <i class="fas fa-file-signature text-3xl text-brand-neon"></i>
                     </div>
                     <h4 class="text-xl font-bold font-heading mb-2">2. Adesão</h4>
-                    <p class="text-sm text-slate-400">Escolhemos o melhor grupo e formalizamos o contrato.</p>
+                    <p class="text-sm text-slate-400 max-w-xs mx-auto">Escolhemos o melhor grupo e formalizamos o contrato.</p>
                 </div>
 
                 <!-- Step 3 -->
@@ -421,7 +430,7 @@
                         <i class="fas fa-trophy text-3xl text-brand-neon"></i>
                     </div>
                     <h4 class="text-xl font-bold font-heading mb-2">3. Contemplação</h4>
-                    <p class="text-sm text-slate-400">Oferta de lances estratégicos ou sorteio.</p>
+                    <p class="text-sm text-slate-400 max-w-xs mx-auto">Oferta de lances estratégicos ou sorteio.</p>
                 </div>
 
                 <!-- Step 4 -->
@@ -430,46 +439,46 @@
                         <i class="fas fa-home text-3xl text-brand-neon"></i>
                     </div>
                     <h4 class="text-xl font-bold font-heading mb-2">4. Conquista</h4>
-                    <p class="text-sm text-slate-400">Liberação do crédito para compra do seu bem.</p>
+                    <p class="text-sm text-slate-400 max-w-xs mx-auto">Liberação do crédito para compra do seu bem.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Depoimentos -->
-    <section class="py-20 bg-brand-light">
+    <section class="py-12 md:py-20 bg-brand-light">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h3 class="text-3xl md:text-4xl font-heading font-bold text-brand-dark text-center mb-12">Histórias de quem realizou</h3>
+            <h3 class="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-brand-dark text-center mb-10 md:mb-12">Histórias de quem realizou</h3>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                 <!-- Depoimento 1 -->
-                <div class="bg-white p-8 rounded-xl shadow-md fade-in-up">
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-md fade-in-up">
                     <div class="text-brand-primary mb-4 text-4xl opacity-20">
                         <i class="fas fa-quote-left"></i>
                     </div>
-                    <p class="text-slate-600 mb-6 h-24">"Profissionalismo ímpar. O Francisco me explicou tudo que o gerente do banco nunca explicou. Consegui meu carro em 3 meses."</p>
+                    <p class="text-slate-600 mb-6 min-h-[5rem]">"Profissionalismo ímpar. O Francisco me explicou tudo que o gerente do banco nunca explicou. Consegui meu carro em 3 meses."</p>
                     <div class="flex items-center">
                         <div class="font-bold text-brand-dark">Marcos Silva</div>
                     </div>
                 </div>
 
                 <!-- Depoimento 2 -->
-                <div class="bg-white p-8 rounded-xl shadow-md fade-in-up" style="animation-delay: 0.1s;">
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-md fade-in-up" style="animation-delay: 0.1s;">
                     <div class="text-brand-primary mb-4 text-4xl opacity-20">
                         <i class="fas fa-quote-left"></i>
                     </div>
-                    <p class="text-slate-600 mb-6 h-24">"A transparência me ganhou. Ele disse exatamente quanto eu precisava de lance e deu certo. Consultoria nota 10."</p>
+                    <p class="text-slate-600 mb-6 min-h-[5rem]">"A transparência me ganhou. Ele disse exatamente quanto eu precisava de lance e deu certo. Consultoria nota 10."</p>
                     <div class="flex items-center">
                         <div class="font-bold text-brand-dark">Fernanda Oliveira</div>
                     </div>
                 </div>
 
                 <!-- Depoimento 3 -->
-                <div class="bg-white p-8 rounded-xl shadow-md fade-in-up" style="animation-delay: 0.2s;">
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-md fade-in-up" style="animation-delay: 0.2s;">
                     <div class="text-brand-primary mb-4 text-4xl opacity-20">
                         <i class="fas fa-quote-left"></i>
                     </div>
-                    <p class="text-slate-600 mb-6 h-24">"Estou construindo meu patrimônio investindo em cartas de crédito com a orientação do Francisco. Melhor investimento seguro."</p>
+                    <p class="text-slate-600 mb-6 min-h-[5rem]">"Estou construindo meu patrimônio investindo em cartas de crédito com a orientação do Francisco. Melhor investimento seguro."</p>
                     <div class="flex items-center">
                         <div class="font-bold text-brand-dark">André Souza</div>
                     </div>
@@ -479,16 +488,16 @@
     </section>
 
     <!-- CTA Final -->
-    <section class="py-24 bg-gradient-to-br from-brand-dark to-slate-900 text-center relative overflow-hidden">
+    <section class="py-16 md:py-24 bg-gradient-to-br from-brand-dark to-slate-900 text-center relative overflow-hidden">
         <div class="absolute inset-0 bg-brand-neon/5"></div>
         <div class="max-w-4xl mx-auto px-4 relative z-10 fade-in-up">
-            <h2 class="text-4xl md:text-5xl font-heading font-extrabold text-white mb-8">
+            <h2 class="text-3xl md:text-5xl font-heading font-extrabold text-white mb-6 md:mb-8">
                 Pronto para conquistar seu sonho com <span class="text-brand-neon">segurança?</span>
             </h2>
-            <p class="text-xl text-slate-300 mb-10">
+            <p class="text-lg md:text-xl text-slate-300 mb-8 md:mb-10">
                 Não perca mais tempo pagando juros abusivos. Vamos planejar sua conquista hoje.
             </p>
-            <a href="https://wa.me/5511999999999?text=Ol%C3%A1%20Francisco%2C%20quero%20conquistar%20meu%20sonho." class="inline-flex items-center justify-center bg-brand-neon hover:bg-cyan-400 text-brand-dark font-heading font-bold text-xl px-10 py-5 rounded-full shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] transition-all transform hover:-translate-y-1">
+            <a href="https://wa.me/5515991668687?text=Ol%C3%A1%20Francisco%2C%20quero%20conquistar%20meu%20sonho." class="inline-flex items-center justify-center bg-brand-neon hover:bg-cyan-400 text-brand-dark font-heading font-bold text-lg md:text-xl px-8 md:px-10 py-4 md:py-5 rounded-full shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] transition-all transform hover:-translate-y-1 w-full md:w-auto">
                 <i class="fab fa-whatsapp text-2xl mr-3"></i>
                 Chamar no WhatsApp Agora
             </a>
@@ -523,9 +532,9 @@
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%20Francisco%2C%20vim%20pelo%20site." class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20ba5a] text-white p-4 rounded-full shadow-lg transition-all hover:scale-110 flex items-center justify-center group">
+    <a href="https://wa.me/5515991668687?text=Ol%C3%A1%20Francisco%2C%20vim%20pelo%20site." class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20ba5a] text-white p-4 rounded-full shadow-lg transition-all hover:scale-110 flex items-center justify-center group">
         <i class="fab fa-whatsapp text-3xl"></i>
-        <span class="absolute right-full mr-4 bg-white text-slate-800 px-3 py-1 rounded-lg text-sm font-bold shadow-md opacity-0 group-hover:opacity-100 transition-opacity w-32 text-center pointer-events-none">
+        <span class="absolute right-full mr-4 bg-white text-slate-800 px-3 py-1 rounded-lg text-sm font-bold shadow-md opacity-0 group-hover:opacity-100 transition-opacity w-32 text-center pointer-events-none hidden md:block">
             Fale comigo!
         </span>
     </a>
